@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBS Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <button id="menu-btn" title="Open Menu">☰</button>
+            <div class="logo">
+                <span class="logo-icon">📅</span>
+                <h1>MBS Planner</h1>
+            </div>
+        </div>
+        <div class="header-right">
+            <button class="today-btn" onclick="goToToday()">Today</button>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar">
+        <div class="nav-links">
+            <a href="index.html" class="active">
+                <span>📅</span> Planner
+            </a>
+            <!-- These links will be empty for now until you make the pages -->
+            <a href="message.html">
+                <span>💬</span> Messaging
+            </a>
+            <a href="global.html">
+                <span>🌍</span> Global Chat
+            </a>
+            <a href="announcements.html">
+                <span>📢</span> Announcement Board
+            </a>
+            <a href="https://student-broken.github.io/" target="_blank">
+                <span>🧮</span> Grade Calculator
+            </a>
+        </div>
+        
+        <div class="nav-footer">
+            <a href="admin.html" class="admin-link">
+                <span>🔒</span> Admin Panel
+            </a>
+        </div>
+    </nav>
+
+    <!-- Dark Overlay (closes menu when clicked) -->
+    <div id="overlay"></div>
+
+    <!-- Main Calendar Area -->
+    <main id="main-content">
+        <div class="calendar-controls">
+            <h2 id="current-month-year">Month Year</h2>
+            <div class="arrows">
+                <button onclick="changeMonth(-1)">&#10094;</button>
+                <button onclick="changeMonth(1)">&#10095;</button>
+            </div>
+        </div>
+
+        <div class="days-header">
+            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+        </div>
+
+        <div id="calendar-grid" class="calendar-grid">
+            <!-- Days are injected here by JS -->
+        </div>
+    </main>
+
+    <script src="calendar.js"></script>
+</body>
+</html>
